@@ -5,7 +5,6 @@ const urlParams = new URLSearchParams(document.location.search);
 for (const [key, _value] of urlParams) {
     const menuItem = document.getElementById(key);
     if (menuItem) {
-        console.log(menuItem);
         menuItem.classList.add('visited');
     }
 }
