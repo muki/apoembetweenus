@@ -1,0 +1,182 @@
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  padding: 20px;
+  padding-top: 200px;
+}
+
+.superscript {
+  vertical-align: super;
+}
+.subscript {
+  vertical-align: sub;
+}
+
+#logo {
+  position: fixed;
+  top: 20px;
+  font-size: 58px; /* mobile 24 */
+  margin-bottom: 20px;
+  span {
+    visibility: visible;
+    transform-origin: 75%;
+    &:nth-child(1) {
+      animation: blink-animation-1 4s;
+    }
+    &:nth-child(2) {
+      animation: blink-animation-2 4s;
+    }
+    &:nth-child(3) {
+      animation: blink-animation-3 4s;
+    }
+    &:nth-child(4) {
+      animation: blink-animation-4 4s;
+    }
+  }
+}
+
+.menu {
+  width: 30%;
+  padding-left: 57px;
+  margin-bottom: 20px;
+  font-size: 28px;
+
+  position: fixed;
+  top: 200px;
+
+  .menu-item {
+    height: 20px;
+    width: 100%;
+    display: inline-block;
+
+    &.visited {
+      &:nth-child(1) {
+        color: cyan;
+      }
+      &:nth-child(2) {
+        color: magenta;
+      }
+      &:nth-child(3) {
+        color: yellow;
+      }
+      &:nth-of-type(4) {
+        color: darkgray;
+      }
+    }
+  }
+}
+
+h1 {
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  span {
+    margin-left: 6px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:nth-child(2n + 1) {
+      vertical-align: super;
+    }
+    &:nth-child(2n) {
+      vertical-align: sub;
+    }
+  }
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+/* animations */
+@keyframes blink-animation-1 {
+  0% {
+    visibility: hidden;
+  }
+  25% {
+    visibility: visible;
+  }
+  50% {
+    visibility: visible;
+  }
+  75% {
+    visibility: visible;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+@keyframes blink-animation-2 {
+  0% {
+    visibility: hidden;
+  }
+  25% {
+    visibility: hidden;
+  }
+  50% {
+    visibility: visible;
+  }
+  75% {
+    visibility: visible;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+@keyframes blink-animation-3 {
+  0% {
+    visibility: hidden;
+  }
+  25% {
+    visibility: hidden;
+  }
+  50% {
+    visibility: hidden;
+  }
+  75% {
+    visibility: visible;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+@keyframes blink-animation-4 {
+  0% {
+    visibility: hidden;
+  }
+  25% {
+    visibility: hidden;
+  }
+  50% {
+    visibility: hidden;
+  }
+  75% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@media (max-width: 639px) {
+  body {
+    padding-top: 20px;
+  }
+  #logo {
+    position: relative;
+    top: 0;
+  }
+  .menu {
+    position: relative;
+    top: 0;
+  }
+}
