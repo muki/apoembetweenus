@@ -10,7 +10,7 @@ for (const [key, _value] of urlParams) {
     }
 }
 
-function menuClick(menuItem:any) {
+function menuClick(menuItem:String) {
     window.location.href = window.location.href + `${menuItem}`;
 
     return false;
