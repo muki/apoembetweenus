@@ -10,12 +10,6 @@ for (const [key, _value] of urlParams) {
     }
 }
 
-function menuClick(menuItem:String) {
-    window.location.href = window.location.href + `${menuItem}`;
-
-    return false;
-}
-
 document.addEventListener('click', (event:any) => {
     if (event.target.classList.contains('menu-item')) {
         event.preventDefault();
